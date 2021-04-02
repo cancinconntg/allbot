@@ -1,7 +1,8 @@
 import telebot
+from telebot import types
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = "" #@BotFather
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot("1699009884:AAHjE7wUGrSQgLUlIWgzucaV91dVJSDZhVs", skip_pending=True)
 
 @bot.message_handler(commands=["start"])
 def start(message):
@@ -23,7 +24,7 @@ def join(message):
         id_file.write("{0}\n".format(user_id))
     id_file.close()
 
-@bot.message_handler(commands=["all@allTestBot","all"])
+@bot.message_handler(commands=["all@mentionicindenemebot","all"])
 def all(message):
     ctext = message.text.replace("/all ","")
     id_list = open("id.txt","r").readlines()
