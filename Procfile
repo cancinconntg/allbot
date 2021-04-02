@@ -1,1 +1,1 @@
-worker: python3 allbot.py
+worker: python3 main.py
